@@ -8,7 +8,6 @@ const reducer = (state = planets[2], action) => {
         let planet = (planets[i].name);
         if (action.name === planet && action.type === "DISPLAY") {
              body = planets[i];
-             console.log(state);
             return planets[i];
         }
     }        
@@ -20,9 +19,6 @@ export default reducer;
 
 export const descReducer = (state =0, action) => {
     if( action.type === 'DISPLAY' && action.name === 'structure' ) {
-        console.log('display')
-        console.log(body);
-        console.log(state);
         return ({
             description: body.structure.content,
             photo: body.images.internal

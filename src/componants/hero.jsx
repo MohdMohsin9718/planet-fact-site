@@ -32,7 +32,7 @@ const Hero = () => {
                     </p>
                     <p>    
                         <span>Source</span>
-                        <a href="https://en.wikipedia.org/wiki/Earth">Wikipedia</a>
+                        <a href={planet.overview.source}>Wikipedia</a>
                     </p>
                 </div>
                 <form className='form'>
@@ -45,12 +45,12 @@ const Hero = () => {
                 <label htmlFor='structure' onClick={() => {
                     displayDesc('structure')
                     document.querySelector('.planet-geo').classList.remove('active')
-                    }}><span>02</span>INTERNAl STRUCTURE</label>
+                    }}><span>02</span><span className='extra'>INTERNAl</span> STRUCTURE</label>
                 <input type="radio" name='features' id='geology' value='geology' />
                 <label htmlFor='geology' onClick={() => {
                     displayDesc('geology')
                     document.querySelector('.planet-geo').classList.add('active')
-                    }}><span>03</span>SURFACE GEOLOGY</label>
+                    }}><span>03</span><span className='extra'>SURFACE</span> GEOLOGY</label>
                 </form>
 
             </div>

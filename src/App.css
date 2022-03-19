@@ -1,3 +1,7 @@
+.close, .open {
+  display: none;
+}
+
 .navbar {
   width: 70%;
   margin: 1em auto;
@@ -131,6 +135,11 @@
   color: gray;
 }
 
+.right-col label .extra {
+  margin: 0;
+  color: white;
+}
+
 .planet-geo {
   width: 150px;
   height: auto;
@@ -227,6 +236,149 @@
   .features {
     width: 95%;
     font-size: .9em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    width: auto;
+  }
+  .nav-left {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 15px;
+    margin-top: -.8em;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .nav-left .open {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: #1b1753;
+    color: #ffffff;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: .5s ease-out;
+    transition: .5s ease-out;
+    z-index: 999;
+  }
+  .nav .close {
+    display: block;
+    margin: 1em;
+  }
+  .nav .close:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .nav .planets {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    padding-top: 0;
+  }
+  .nav .planets li {
+    margin: 0;
+    padding: 1em;
+    font-size: 1.2rem;
+  }
+  .display {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: .5s ease-out;
+    transition: .5s ease-out;
+  }
+  .hero {
+    width: auto;
+    margin: 7em auto 1em auto;
+  }
+  .hero .planet-img {
+    width: 250px;
+    height: 250px;
+  }
+  .hero .form {
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    top: 3em;
+    left: 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #b3b2b2;
+  }
+  .hero .form label {
+    border: none;
+    padding: .5em 0 .8em 0;
+  }
+  .hero .form label span {
+    display: none;
+  }
+  .hero .form label:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  .hero .right-col {
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+  }
+  .features {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    margin: auto;
+    padding-bottom: 3em;
+  }
+  .features .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: .5em;
+  }
+  .features .stats p {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=App.css.map */
